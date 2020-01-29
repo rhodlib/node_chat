@@ -1,0 +1,20 @@
+{
+  "name": "backend_node",
+  "version": "1.0.0",
+  "description": "A chat like telegram",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chat",
+    "backend",
+    "node",
+    "server"
+  ],
+  "author": "Rhodlib",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
