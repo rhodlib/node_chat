@@ -1,5 +1,7 @@
 # NODE CHAT
 
+## This application is under construction
+
 ## Technologies
 
 * [Node.js](https://nodejs.org)

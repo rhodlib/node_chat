@@ -19,9 +19,19 @@ function addMessage(message) {
   myMessage.save();
 }
 
-async function getMessage() {
-  const messages = await Model.find();
+async function getMessage(filterUser) {
+  let filter = {};
+  if(filterUser !== null ) {
+    filter = { user: filterUser };
+  }
+  const messages = await Model.find(filter);
   return messages;
+}
+
+function removeMessage(id) {
+  return Model.deleteOne({
+    _id: id
+  })
 }
 
 async function updateText(id, message) {
@@ -36,5 +46,6 @@ async function updateText(id, message) {
 module.exports = {
   add: addMessage,
   list: getMessage,
-  updateText: updateText
+  updateText: updateText,
+  remove: removeMessage,
 };
